@@ -2,6 +2,22 @@
   "name": "melange-app",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngstwr/melange-app.git"
+  },
+  "author": "Nagesh Tiwari <ngstwr@gmail.com> (https://nageshtiwari.com)",
+  "bugs": {
+    "url": "https://github.com/ngstwr/melange-app/issues"
+  },
+  "homepage": "https://melange.ngstwr.com",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "deploy": "npm run build && firebase deploy",
+    "firebase-init": "firebase login && firebase init"
+  },
   "dependencies": {
     "autoprefixer": "7.1.1",
     "axios": "^0.16.2",
@@ -53,13 +69,6 @@
     "webpack-dev-server": "2.5.0",
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
-  },
-  "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "deploy": "npm run build && firebase deploy",
-    "firebase-init": "firebase login && firebase init"
   },
   "jest": {
     "collectCoverageFrom": [
